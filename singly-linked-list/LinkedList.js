@@ -7,11 +7,11 @@ class LinkedList {
 
   addToHead(data) {
     const newHead = new Nodes(data);
-    console.log('the new head is ', newHead);
+    // console.log('the new head is ', newHead);
     const currentHead = this.head;
-    console.log('the current head is ', currentHead);
+    // console.log('the current head is ', currentHead);
     this.head = newHead;
-    console.log('the assigned value of this.head is ', this.head);
+    // console.log('the assigned value of this.head is ', this.head);
     if (currentHead) {
       this.head.setNextNode(currentHead);
     }
@@ -19,20 +19,20 @@ class LinkedList {
 
   addToTail(data) {
     let tail = this.head;
-    console.log('initial tail value is ', tail);
+    // console.log('initial tail value is ', tail);
     if (!tail) {
-      console.log('list is empty');
+      // console.log('list is empty');
       this.head = new Nodes(data);
-      console.log('this.head value is ', this.head);
+      // console.log('this.head value is ', this.head);
     } else {
       while (tail.getNextNode() !== null) {
-        console.log('trying to find the end of the tail');
+        // console.log('trying to find the end of the tail');
         tail = tail.getNextNode();
-        console.log('the tail end is ', tail);
+        // console.log('the tail end is ', tail);
       }
-      console.log('setting the next node');
+      // console.log('setting the next node');
       tail.setNextNode(new Nodes(data));
-      console.log('next node is set', tail);
+      // console.log('next node is set', tail);
     }
   }
 
